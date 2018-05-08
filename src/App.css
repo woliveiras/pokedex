@@ -1,28 +1,42 @@
-.App {
-  text-align: center;
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.top-bar, .bottom-bar {
+  flex: 1;
+  background-color: #c40c24;
+  border: 1px solid #52181c;
+  height: 210px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.top-bar {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 5px solid black;
 }
 
-.App-title {
-  font-size: 1.5em;
+.bottom-bar {
+  border-radius: 0 0 10px 10px;
+  border-top: 5px solid black;
 }
 
-.App-intro {
-  font-size: large;
+.visor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0f5fe94;
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+  /* height: 420px; */
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.visor__action-button {
+    background-color: white;
+    border: 1px solid #b4e5ec;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
 }
