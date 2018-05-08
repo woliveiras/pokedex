@@ -15,6 +15,20 @@ class App extends Component {
     })
   }
 
+  renderActionButton = () => {
+    if (this.state.isVisorActive) {
+      return (
+        <input type="text" />
+      )
+    }
+    return (
+      <button
+        className="visor__action-button"
+        onClick={this.toggleVisor}>
+      </button>
+    )
+  }
+
   render() {
     return (
       <div className="pokedex">
@@ -22,10 +36,7 @@ class App extends Component {
         <div 
           className="visor"
           style={{ height: this.state.isVisorActive ? '420px' : '' }}>
-          <button 
-            className="visor__action-button" 
-            onClick={ this.toggleVisor }>
-          </button>
+          { this.renderActionButton() }
         </div>
         <div className="bottom-bar"></div>
       </div>
