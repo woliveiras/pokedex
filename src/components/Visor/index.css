@@ -7,13 +7,3 @@
   border-left: 5px solid white;
   position: relative;
 }
-
-.visor__action-button {
-    background-color: white;
-    border: 1px solid #b4e5ec;
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    outline: none;
-}

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
+import ActionButton from '../ActionButton'
 
 export default function Visor(props) {
     const isVisorActive = props.isVisorActive
@@ -12,10 +13,7 @@ export default function Visor(props) {
             )
         }
         return (
-            <button
-                className="visor__action-button"
-                onClick={ props.toggleVisor }>
-            </button>
+            <ActionButton action={ props.toggleVisor }/>
         )
     }
     return (
