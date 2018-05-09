@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
 
 export default function Visor(props) {
@@ -24,4 +25,9 @@ export default function Visor(props) {
             { renderActionButton() }
         </div>
     )
+}
+
+Visor.propTypes = {
+    isVisorActive: PropTypes.bool.isRequired,
+    toggleVisor: PropTypes.func.isRequired
 }
