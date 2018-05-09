@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
 import ActionButton from '../ActionButton'
+import SearchInput from '../SearchInput'
 
 export default function Visor(props) {
     const isVisorActive = props.isVisorActive
 
     const renderActionButton = () => {
         if (isVisorActive) {
-            return (
-                <input type="text" />
+            return(
+                <SearchInput />
             )
         }
         return (
