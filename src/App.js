@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
 import Cover from './components/Cover'
+import Visor from './components/Visor'
 
 class App extends Component {
   constructor(props) {
@@ -16,29 +16,19 @@ class App extends Component {
     })
   }
 
-  renderActionButton = () => {
-    if (this.state.isVisorActive) {
-      return (
-        <input type="text" />
-      )
-    }
-    return (
-      <button
-        className="visor__action-button"
-        onClick={this.toggleVisor}>
-      </button>
-    )
-  }
-
   render() {
+    const styles = {
+      display: 'flex',
+      flexDirection: 'column',
+      maxWidth: '420px'
+    }
+
     return (
-      <div className="pokedex">
+      <div style={ styles }>
         <Cover position="top" />
-        <div 
-          className="visor"
-          style={{ height: this.state.isVisorActive ? '420px' : '' }}>
-          { this.renderActionButton() }
-        </div>
+        <Visor 
+          isVisorActive={ this.state.isVisorActive }
+          toggleVisor={ this.toggleVisor } />
         <Cover position="bottom" />
       </div>
     );
