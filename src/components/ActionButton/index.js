@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function ActionButton(props) {
     const styles = {
@@ -17,4 +18,8 @@ export default function ActionButton(props) {
             onClick={ props.action }>
         </button>
     )
+}
+
+ActionButton.propTypes = {
+    action: PropTypes.func.isRequired
 }
