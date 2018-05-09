@@ -2,7 +2,7 @@
 
 Este app nasceu para ensinar os conceitos da utilização de React em meus artigos no iMasters.
 
-A ideia é criar uma Pokédex com React consumindo a API do PokeAPI para fazer buscas dos dados dos Pokémons.
+A ideia é criar uma Pokédex com React consumindo a API do [PokeAPI](https://pokeapi.co) para fazer buscas dos dados dos Pokémons.
 
 A inspiração foi essa aqui:
 
