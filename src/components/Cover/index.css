@@ -1,0 +1,9 @@
+.top-bar {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 5px solid black;
+}
+
+.bottom-bar {
+  border-radius: 0 0 10px 10px;
+  border-top: 5px solid black;
+}

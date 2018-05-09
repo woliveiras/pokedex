@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Cover from './components/Cover'
 
 class App extends Component {
   constructor(props) {
@@ -32,13 +33,13 @@ class App extends Component {
   render() {
     return (
       <div className="pokedex">
-        <div className="top-bar"></div>
+        <Cover position="top" />
         <div 
           className="visor"
           style={{ height: this.state.isVisorActive ? '420px' : '' }}>
           { this.renderActionButton() }
         </div>
-        <div className="bottom-bar"></div>
+        <Cover position="bottom" />
       </div>
     );
   }

@@ -4,23 +4,6 @@
   max-width: 420px;
 }
 
-.top-bar, .bottom-bar {
-  flex: 1;
-  background-color: #c40c24;
-  border: 1px solid #52181c;
-  height: 210px;
-}
-
-.top-bar {
-  border-radius: 10px 10px 0 0;
-  border-bottom: 5px solid black;
-}
-
-.bottom-bar {
-  border-radius: 0 0 10px 10px;
-  border-top: 5px solid black;
-}
-
 .visor {
   display: flex;
   justify-content: center;
