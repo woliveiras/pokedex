@@ -24,7 +24,7 @@ export default function Visor(props) {
     return (
         <Motion
             defaultStyle={{ height: 0 }}
-            style={{ height: isVisorActive ? spring(500) : 0 }}>
+            style={{ height: isVisorActive ? spring(420) : 0 }}>
             {interpolatingStyle => 
                 <div className="visor" style={interpolatingStyle}>
                     { renderActionButton() }
