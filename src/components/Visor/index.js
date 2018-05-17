@@ -1,8 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.css'
+// Animation helpers
+import { Motion, spring } from 'react-motion'
+// Components
 import ActionButton from '../ActionButton'
 import SearchInput from '../SearchInput'
+// Styles
+import './index.css'
 
 export default function Visor(props) {
     const isVisorActive = props.isVisorActive
@@ -18,11 +22,15 @@ export default function Visor(props) {
         )
     }
     return (
-        <div
-            className="visor"
-            style={{ height: isVisorActive ? '420px' : '' }}>
-            { renderActionButton() }
-        </div>
+        <Motion
+            defaultStyle={{ height: 0 }}
+            style={{ height: isVisorActive ? spring(500) : 0 }}>
+            {interpolatingStyle => 
+                <div className="visor" style={interpolatingStyle}>
+                    { renderActionButton() }
+                </div>
+            }
+        </Motion>
     )
 }
 
