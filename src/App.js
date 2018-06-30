@@ -20,11 +20,15 @@ class App extends Component {
     const styles = {
       display: 'flex',
       flexDirection: 'column',
+      fontFamily: "Arial",
+      textAlign: "center",
       maxWidth: '420px'
     }
 
     return (
       <div style={ styles }>
+        <h1>Pokédex | React</h1>
+        <p>Clique no centro da Pokédex</p>
         <Cover position="top" />
         <Visor 
           isVisorActive={ this.state.isVisorActive }
